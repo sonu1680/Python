@@ -1,15 +1,15 @@
 {
-    "version": 2,
-    "functions": {
-      "api/portfolio_management.py": {
-        "runtime": "python3.9"
-      }
-    },
-    "routes": [
-      {
-        "src": "/portfolio",
-        "dest": "/api/portfolio_management.py"
-      }
-    ]
-  }
-  
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/portfolio_management.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/portfolio",
+      "dest": "/api/portfolio_management.py"
+    }
+  ]
+}
